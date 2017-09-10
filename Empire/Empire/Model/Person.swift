@@ -23,11 +23,11 @@ struct RandomChance {
 }
 
 let strengthDecreaseChance = RandomChance(of: 0.25) // per birth
-let diseaseCureChance = RandomChance(of: 0.01) // per tick
-let diseaseHeredityChance = RandomChance(of: 0.2)
-let diseaseMutationChance = RandomChance(of: 0.00001)
-let diseaseSpreadChance = RandomChance(of: 0.5) // per encounter
-let reproductionThreshold = 15
+let diseaseCureChance = RandomChance(of: 0.15) // per tick
+let diseaseHeredityChance = RandomChance(of: 0.1)
+let diseaseMutationChance = RandomChance(of: 0.0001)
+let diseaseSpreadChance = RandomChance(of: 0.4) // per encounter
+let reproductionThreshold = 20
 
 class Person {
 	unowned var world: World
@@ -43,7 +43,7 @@ class Person {
 		self.world = world
 		self.position = position
 		self.colony = colony
-		self.strength = 20 + .randomValue(lessThan: 20) // 20...40
+		self.strength = 80 + .randomValue(lessThan: 20)
 		self.reproductionValue = .randomValue(lessThan: reproductionThreshold)
 		
 		world[position].person = self
@@ -69,7 +69,9 @@ class Person {
 	var color: Pixel {
 		var color = colony.color
 		if isDiseased {
-			color.alpha = UInt8(Int(color.alpha) * 7/8)
+			color.red   = color.red   / 8 * 7
+			color.green = color.green / 8 * 7
+			color.blue  = color.blue  / 8 * 7
 		}
 		return color
 	}
@@ -115,6 +117,7 @@ class Person {
 					die()
 					return
 				} else {
+					isDiseased = isDiseased || other.isDiseased && diseaseSpreadChance.isFulfilled()
 					other.die()
 					reproductionValue += reproductionThreshold
 					fallthrough

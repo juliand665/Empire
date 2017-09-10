@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../Bitmap/Bitmap/Bitmap.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "container:Empire.xcodeproj">
    </FileRef>
 </Workspace>

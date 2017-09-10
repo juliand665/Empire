@@ -14,65 +14,21 @@
 		950F28821F5DC39A00D7394B /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F28811F5DC39A00D7394B /* World.swift */; };
 		950F28841F5DC3A100D7394B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F28831F5DC3A100D7394B /* Person.swift */; };
 		950F28861F5DC41E00D7394B /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F28851F5DC41E00D7394B /* Helpers.swift */; };
-		950F28A41F5DD9BE00D7394B /* Bitmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950F28971F5DD93C00D7394B /* Bitmap.framework */; };
-		950F28A51F5DD9BE00D7394B /* Bitmap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 950F28971F5DD93C00D7394B /* Bitmap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		953D891A1F61B27F007E701C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 953D89151F61B27F007E701C /* QuartzCore.framework */; };
 		956998741F62F3F9007F0219 /* Colony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956998731F62F3F9007F0219 /* Colony.swift */; };
+		958BB3ED1F6491790092C658 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958BB3EC1F6491790092C658 /* Map.swift */; };
+		958BB4081F654B420092C658 /* Bitmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958BB4051F654B380092C658 /* Bitmap.framework */; };
+		958BB4091F654B420092C658 /* Bitmap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 958BB4051F654B380092C658 /* Bitmap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		950F28941F5DD93C00D7394B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 95B945FD1F587489008D038A;
-			remoteInfo = "Bitmap iOS";
-		};
-		950F28961F5DD93C00D7394B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 95B9460B1F5874A5008D038A;
-			remoteInfo = "Bitmap macOS";
-		};
-		950F28981F5DD93C00D7394B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 95B946181F5874B0008D038A;
-			remoteInfo = "Bitmap watchOS";
-		};
-		950F289A1F5DD93C00D7394B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 95B946251F5874BA008D038A;
-			remoteInfo = "Bitmap tvOS";
-		};
-		950F289C1F5DD93C00D7394B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 95E3341B1F5B78210025D5EB;
-			remoteInfo = BitmapTests;
-		};
-		950F28A61F5DD9BE00D7394B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 95B9460A1F5874A5008D038A;
-			remoteInfo = "Bitmap macOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		950F28A81F5DD9BE00D7394B /* Embed Frameworks */ = {
+		958BB40A1F654B420092C658 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				950F28A51F5DD9BE00D7394B /* Bitmap.framework in Embed Frameworks */,
+				958BB4091F654B420092C658 /* Bitmap.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,9 +46,10 @@
 		950F28811F5DC39A00D7394B /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		950F28831F5DC3A100D7394B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		950F28851F5DC41E00D7394B /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Bitmap.xcodeproj; path = ../../../../GitHub/Bitmap/Bitmap/Bitmap.xcodeproj; sourceTree = "<group>"; };
 		953D89151F61B27F007E701C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		956998731F62F3F9007F0219 /* Colony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colony.swift; sourceTree = "<group>"; };
+		958BB3EC1F6491790092C658 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		958BB4051F654B380092C658 /* Bitmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bitmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				953D891A1F61B27F007E701C /* QuartzCore.framework in Frameworks */,
-				950F28A41F5DD9BE00D7394B /* Bitmap.framework in Frameworks */,
+				958BB4081F654B420092C658 /* Bitmap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +71,6 @@
 				950F286C1F5DC1AD00D7394B /* Empire */,
 				950F286B1F5DC1AD00D7394B /* Products */,
 				950F287D1F5DC1FF00D7394B /* Frameworks */,
-				950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				953D89151F61B27F007E701C /* QuartzCore.framework */,
+				958BB4051F654B380092C658 /* Bitmap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,23 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				950F28811F5DC39A00D7394B /* World.swift */,
+				958BB3EC1F6491790092C658 /* Map.swift */,
 				956998731F62F3F9007F0219 /* Colony.swift */,
 				950F28831F5DC3A100D7394B /* Person.swift */,
 				950F28851F5DC41E00D7394B /* Helpers.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		950F288D1F5DD93C00D7394B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				950F28951F5DD93C00D7394B /* Bitmap.framework */,
-				950F28971F5DD93C00D7394B /* Bitmap.framework */,
-				950F28991F5DD93C00D7394B /* Bitmap.framework */,
-				950F289B1F5DD93C00D7394B /* Bitmap.framework */,
-				950F289D1F5DD93C00D7394B /* BitmapTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +127,11 @@
 				950F28661F5DC1AD00D7394B /* Sources */,
 				950F28671F5DC1AD00D7394B /* Frameworks */,
 				950F28681F5DC1AD00D7394B /* Resources */,
-				950F28A81F5DD9BE00D7394B /* Embed Frameworks */,
+				958BB40A1F654B420092C658 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				950F28A71F5DD9BE00D7394B /* PBXTargetDependency */,
 			);
 			name = Empire;
 			productName = Empire;
@@ -220,56 +165,12 @@
 			mainGroup = 950F28611F5DC1AD00D7394B;
 			productRefGroup = 950F286B1F5DC1AD00D7394B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 950F288D1F5DD93C00D7394B /* Products */;
-					ProjectRef = 950F288C1F5DD93C00D7394B /* Bitmap.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				950F28691F5DC1AD00D7394B /* Empire */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		950F28951F5DD93C00D7394B /* Bitmap.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Bitmap.framework;
-			remoteRef = 950F28941F5DD93C00D7394B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		950F28971F5DD93C00D7394B /* Bitmap.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Bitmap.framework;
-			remoteRef = 950F28961F5DD93C00D7394B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		950F28991F5DD93C00D7394B /* Bitmap.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Bitmap.framework;
-			remoteRef = 950F28981F5DD93C00D7394B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		950F289B1F5DD93C00D7394B /* Bitmap.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Bitmap.framework;
-			remoteRef = 950F289A1F5DD93C00D7394B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		950F289D1F5DD93C00D7394B /* BitmapTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = BitmapTests.xctest;
-			remoteRef = 950F289C1F5DD93C00D7394B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		950F28681F5DC1AD00D7394B /* Resources */ = {
@@ -291,6 +192,7 @@
 				950F28821F5DC39A00D7394B /* World.swift in Sources */,
 				950F28701F5DC1AD00D7394B /* ViewController.swift in Sources */,
 				950F28841F5DC3A100D7394B /* Person.swift in Sources */,
+				958BB3ED1F6491790092C658 /* Map.swift in Sources */,
 				950F28861F5DC41E00D7394B /* Helpers.swift in Sources */,
 				950F286E1F5DC1AD00D7394B /* AppDelegate.swift in Sources */,
 				956998741F62F3F9007F0219 /* Colony.swift in Sources */,
@@ -298,14 +200,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		950F28A71F5DD9BE00D7394B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Bitmap macOS";
-			targetProxy = 950F28A61F5DD9BE00D7394B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		950F28731F5DC1AD00D7394B /* Main.storyboard */ = {
@@ -428,7 +322,6 @@
 		950F287B1F5DC1AD00D7394B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Empire/Empire.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,7 +338,6 @@
 		950F287C1F5DC1AD00D7394B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Empire/Empire.entitlements;
 				CODE_SIGN_STYLE = Automatic;

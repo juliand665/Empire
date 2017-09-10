@@ -18,8 +18,13 @@ extension Int {
 }
 
 extension BinaryFloatingPoint {
-	static func randomValue(in bounds: (lo: Double, hi: Double)? = nil) -> Self {
-		return Self(arc4random()) / Self(UInt32.max)
+	static func randomValue(in bounds: (lo: Self, hi: Self)? = nil) -> Self {
+		let random = Self(arc4random()) / Self(UInt32.max)
+		if let (lo, hi) = bounds {
+			return lo + (hi - lo) * random
+		} else {
+			return random
+		}
 	}
 }
 

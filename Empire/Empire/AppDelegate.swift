@@ -10,6 +10,16 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+	@IBAction func zoomOneToOne(_ sender: Any) {
+		let window = NSApplication.shared.keyWindow
+		guard let controller = window?.contentViewController as? ViewController else {
+			return
+		}
+		let size = controller.world.size
+		print(size)
+		window?.setContentSize(size)
+	}
+	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		
 	}

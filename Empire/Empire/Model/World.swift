@@ -37,6 +37,10 @@ class World {
 		set {        tiles[position.y][position.x] = newValue }
 	}
 	
+	var size: CGSize {
+		return background.size
+	}
+	
 	var people: [Person] {
 		return tiles.flatMap { $0.flatMap { $0.person } }
 	}
@@ -50,17 +54,21 @@ class World {
 	}
 	
 	func update() {
+		for line in tiles {
+			for tile in line {
+				guard let person = tile.person else { continue }
+				person.update()
+			}
+		}
 		for person in people {
 			person.update()
 		}
 	}
 	
 	func render() -> CGImage {
-		let copy = background.copy()
 		let pixels = tiles.flatMap { $0.map { $0.color } }
 		let bitmap = Bitmap(width: width, height: height, pixels: pixels)!
-		copy.withContext { $0.draw(bitmap) }
-		return copy.cgImage()
+		return bitmap.cgImage()
 	}
 }
 

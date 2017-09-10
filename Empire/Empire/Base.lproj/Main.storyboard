@@ -604,25 +604,12 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
                                     <items>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                        <menuItem title="Zoom 100%" keyEquivalent="1" id="PEq-Xb-qxv">
                                             <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
+                                                <action selector="zoomOneToOne:" target="Voe-Tx-rLC" id="d3G-ZV-LXj"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
-                                        <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
@@ -684,7 +671,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Map" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Map" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -705,8 +692,8 @@
         <!--Window Controller-->
         <scene sceneID="lQJ-yk-n9i">
             <objects>
-                <windowController id="TI9-tb-0RB" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="NV9-5L-VGu">
+                <windowController storyboardIdentifier="Stats" id="TI9-tb-0RB" sceneMemberID="viewController">
+                    <window key="window" title="Stats" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="NV9-5L-VGu">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="294" y="362" width="480" height="270"/>
@@ -743,9 +730,28 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Od6-sP-BC2">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="iPd-yV-xzH">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="iPd-yV-xzH" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Cgt-RD-6JF"/>
+                            <constraint firstAttribute="bottom" secondItem="iPd-yV-xzH" secondAttribute="bottom" id="DeQ-fO-HuX"/>
+                            <constraint firstAttribute="trailing" secondItem="Od6-sP-BC2" secondAttribute="trailing" id="KmJ-Ca-UNv"/>
+                            <constraint firstItem="Od6-sP-BC2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Yec-VQ-jZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="iPd-yV-xzH" secondAttribute="trailing" id="eNs-3S-q8g"/>
+                            <constraint firstItem="iPd-yV-xzH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="gkO-4c-LEC"/>
+                            <constraint firstAttribute="bottom" secondItem="Od6-sP-BC2" secondAttribute="bottom" id="jPZ-Ep-R6c"/>
+                            <constraint firstItem="Od6-sP-BC2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="rTh-XQ-cgh"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="worldView" destination="m2S-Jp-Qdl" id="F8F-Lf-SYE"/>
+                        <outlet property="backgroundView" destination="Od6-sP-BC2" id="MAm-oa-CSl"/>
+                        <outlet property="worldView" destination="iPd-yV-xzH" id="yUK-ag-joF"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
